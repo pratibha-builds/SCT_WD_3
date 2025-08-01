@@ -61,15 +61,11 @@
 
 # Project Structure
 
-
 📁 neon-tic-tac-toe/
 ├── index.html
 ├── styles.css
 ├── script.js
 ├── Readme.md
-
-
-
 
 
 # 🤝 Contributing
