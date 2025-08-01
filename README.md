@@ -1,4 +1,4 @@
-# Neon Tic-Tac-Toe
+#  Tic-Tac-Toe
 
  A glowing, feature-rich, and responsive Tic Tac Toe game built with HTML, CSS, and JavaScript.
   It includes intelligent AI (with Minimax), PvP and PvC modes, theme switching, persistent match history, and a stylish neumorphic UI — all crafted for a polished and fun user experience.
