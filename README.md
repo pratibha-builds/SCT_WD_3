@@ -67,10 +67,9 @@
 ├── styles.css
 ├── script.js
 ├── Readme.md
-└── assets/
-    └── preview.png
 
-   
+
+
 
 
 # 🤝 Contributing
