@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Poppins:wght@300;500;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-wrapper">
+            <header>
+                <h1><span class="neon-text"></span> TIC-TAC-TOE</h1>
+                <div class="theme-toggle">
+                    <button id="themeBtn" class="neumorphic-btn">
+                        <span class="btn-icon">🌙</span> 
+                        <span class="btn-text">Dark Mode</span>
+                    </button>
+                </div>
+            </header>
+
+            <div class="player-setup" id="playerSetup">
+                <h2 class="section-title">PLAYER SETUP</h2>
+                <div class="player-inputs">
+                    <div class="input-group neumorphic-inset">
+                        <label for="player1Name">PLAYER 1 NAME</label>
+                        <input type="text" id="player1Name" placeholder="Your name">
+                    </div>
+                    <div class="input-group neumorphic-inset" id="player2InputGroup">
+                        <label for="player2Name">PLAYER 2 NAME</label>
+                        <input type="text" id="player2Name" placeholder="Opponent's name">
+                    </div>
+                </div>
+                
+                <div class="token-selection neumorphic-panel">
+                    <h3>SELECT YOUR SYMBOL</h3>
+                    <div class="token-options">
+                        <div class="token-choice">
+                            <input type="radio" id="player1X" name="player1Token" value="X" checked>
+                            <label for="player1X" class="neumorphic-btn-circle">X</label>
+                        </div>
+                        <div class="token-choice">
+                            <input type="radio" id="player1O" name="player1Token" value="O">
+                            <label for="player1O" class="neumorphic-btn-circle">O</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-mode neumorphic-panel">
+                    <h3>GAME MODE</h3>
+                    <div class="mode-options">
+                        <button class="mode-btn neumorphic-btn active" data-mode="pvp">
+                            <span class="btn-icon">👥</span>
+                            <span class="btn-text">VS PLAYER</span>
+                        </button>
+                        <button class="mode-btn neumorphic-btn" data-mode="pvc">
+                            <span class="btn-icon">🤖</span>
+                            <span class="btn-text">VS COMPUTER</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="difficulty neumorphic-panel" id="difficultySection">
+                    <h3>DIFFICULTY</h3>
+                    <div class="difficulty-options">
+                        <button class="difficulty-btn neumorphic-btn-sm active" data-difficulty="easy">EASY</button>
+                        <button class="difficulty-btn neumorphic-btn-sm" data-difficulty="medium">MEDIUM</button>
+                        <button class="difficulty-btn neumorphic-btn-sm" data-difficulty="hard">HARD</button>
+                    </div>
+                </div>
+
+                <button id="startGameBtn" class="neumorphic-btn primary">
+                    <span class="btn-icon">🚀</span>
+                    <span class="btn-text">START GAME</span>
+                </button>
+            </div>
+
+            <div class="game-controls" id="gameControls" style="display: none;">
+                <div class="game-status neumorphic-panel">
+                    <div class="scores">
+                        <div class="score neumorphic-inset-sm" id="player1Score">
+                            <span class="score-label">PLAYER 1</span>
+                            <span class="score-value">0</span>
+                        </div>
+                        <div class="score neumorphic-inset-sm" id="player2Score">
+                            <span class="score-label">PLAYER 2</span>
+                            <span class="score-value">0</span>
+                        </div>
+                        <div class="score neumorphic-inset-sm" id="drawScore">
+                            <span class="score-label">DRAWS</span>
+                            <span class="score-value">0</span>
+                        </div>
+                    </div>
+                    <div class="turn-indicator neumorphic" id="turnIndicator">
+                        <div class="indicator-dot"></div>
+                        <span>PLAYER 1'S TURN</span>
+                    </div>
+                </div>
+
+                <div class="game-board" id="gameBoard">
+                    <!-- Cells will be generated by JavaScript -->
+                </div>
+
+                <div class="game-actions">
+                    <button id="resetBtn" class="neumorphic-btn">
+                        <span class="btn-icon">🔄</span>
+                        <span class="btn-text">RESET</span>
+                    </button>
+                    <button id="newGameBtn" class="neumorphic-btn">
+                        <span class="btn-icon">🆕</span>
+                        <span class="btn-text">NEW GAME</span>
+                    </button>
+                    <button id="changePlayersBtn" class="neumorphic-btn">
+                        <span class="btn-icon">👥</span>
+                        <span class="btn-text">CHANGE PLAYERS</span>
+                    </button>
+                </div>
+
+                <div class="history-panel neumorphic-panel">
+                    <h3>GAME HISTORY</h3>
+                    <div class="history-list" id="historyList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
